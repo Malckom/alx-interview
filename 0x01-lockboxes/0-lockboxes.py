@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+"""Defines a function that determines if a box containing a list
+   of lists can be opened using keys stored in the lists
+"""
+
 def canUnlockAll(boxes):
     visited = set()
     queue = [0]  # Start with the first box
@@ -12,3 +17,5 @@ def canUnlockAll(boxes):
                     queue.append(key)
 
     return len(visited) == len(boxes)
+
+
